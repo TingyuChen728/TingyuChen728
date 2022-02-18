@@ -1,0 +1,40 @@
+<html>
+<title>
+
+</html>
+<body>
+    <hi>show all rectangle</hi>
+    <table>
+        <tr>
+            <th>name</th>   
+            <th>width</th>  
+            <th>height</th>   
+            <th>color</th>
+            <th>detail</th>
+        </tr>
+        < % results.row.foreach{dunction(r)}{ %>
+            <form action="/detail" method="get">
+                <tr>
+                    <td><input name="name" type="submit" value="<%= r.name %" ></td>  
+                    <td><input name="width" type="hidden" value="<%= r.width %" ></td> 
+                    <td><input name="height" type="hidden" value="<%= r.height %" ></td> 
+                    <td><input name="color" type="hidden" value="<%= r.color %" ></td> 
+                </tr>
+            </form>
+        < % }); %>
+    </table>
+    <br>
+    <hi>add rectangles</hi>
+    <form action="/rectangles" method="post" >
+        <lable for="name">name</lable>
+        <input type="text" name="name1" id="name" />
+        <lable for="width">width</lable>
+        <input type="text" name="width1" id="width1" />
+        <lable for="height">height</lable>
+        <input type="height" name="height1" id="height1" />  
+        <lable for="color">color</lable>
+        <input type="color" name="color1" id="color1" />  
+        <input type="submit">
+
+    </form>
+</body>
